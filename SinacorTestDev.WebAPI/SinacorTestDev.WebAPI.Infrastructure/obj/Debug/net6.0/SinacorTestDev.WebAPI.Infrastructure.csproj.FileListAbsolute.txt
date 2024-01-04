@@ -1,0 +1,11 @@
+C:\Users\ALEXANDRE\Desktop\apps\SinacorTestDev.WebAPI\SinacorTestDev.WebAPI.Infrastructure\bin\Debug\net6.0\SinacorTestDev.WebAPI.Infrastructure.deps.json
+C:\Users\ALEXANDRE\Desktop\apps\SinacorTestDev.WebAPI\SinacorTestDev.WebAPI.Infrastructure\bin\Debug\net6.0\SinacorTestDev.WebAPI.Infrastructure.dll
+C:\Users\ALEXANDRE\Desktop\apps\SinacorTestDev.WebAPI\SinacorTestDev.WebAPI.Infrastructure\bin\Debug\net6.0\SinacorTestDev.WebAPI.Infrastructure.pdb
+C:\Users\ALEXANDRE\Desktop\apps\SinacorTestDev.WebAPI\SinacorTestDev.WebAPI.Infrastructure\obj\Debug\net6.0\SinacorTestDev.WebAPI.Infrastructure.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\ALEXANDRE\Desktop\apps\SinacorTestDev.WebAPI\SinacorTestDev.WebAPI.Infrastructure\obj\Debug\net6.0\SinacorTestDev.WebAPI.Infrastructure.AssemblyInfoInputs.cache
+C:\Users\ALEXANDRE\Desktop\apps\SinacorTestDev.WebAPI\SinacorTestDev.WebAPI.Infrastructure\obj\Debug\net6.0\SinacorTestDev.WebAPI.Infrastructure.AssemblyInfo.cs
+C:\Users\ALEXANDRE\Desktop\apps\SinacorTestDev.WebAPI\SinacorTestDev.WebAPI.Infrastructure\obj\Debug\net6.0\SinacorTestDev.WebAPI.Infrastructure.csproj.CoreCompileInputs.cache
+C:\Users\ALEXANDRE\Desktop\apps\SinacorTestDev.WebAPI\SinacorTestDev.WebAPI.Infrastructure\obj\Debug\net6.0\SinacorTestDev.WebAPI.Infrastructure.dll
+C:\Users\ALEXANDRE\Desktop\apps\SinacorTestDev.WebAPI\SinacorTestDev.WebAPI.Infrastructure\obj\Debug\net6.0\refint\SinacorTestDev.WebAPI.Infrastructure.dll
+C:\Users\ALEXANDRE\Desktop\apps\SinacorTestDev.WebAPI\SinacorTestDev.WebAPI.Infrastructure\obj\Debug\net6.0\SinacorTestDev.WebAPI.Infrastructure.pdb
+C:\Users\ALEXANDRE\Desktop\apps\SinacorTestDev.WebAPI\SinacorTestDev.WebAPI.Infrastructure\obj\Debug\net6.0\ref\SinacorTestDev.WebAPI.Infrastructure.dll
