@@ -3,21 +3,7 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.8.34330.188
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Application", "Application", "{C133E498-BE8C-4FB7-BE36-EA05B9A1A806}"
-EndProject
-Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Services", "Services", "{C627B84F-CA35-4FA0-A3BC-A4105DC9BA7C}"
-EndProject
-Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Domain", "Domain", "{14E77246-2CC9-4C08-9987-12C70994FEE6}"
-EndProject
-Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Infrastructure", "Infrastructure", "{123A4E41-A147-465A-8391-F5F491BDB3B9}"
-EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SinacorTestDev.WebAPI.Application", "SinacorTestDev.WebAPI.Application\SinacorTestDev.WebAPI.Application.csproj", "{3B567923-BE82-4EAA-82C5-890839475FE9}"
-EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SinacorTestDev.WebAPI.Domain", "SinacorTestDev.WebAPI.Domain\SinacorTestDev.WebAPI.Domain.csproj", "{36039302-5442-4310-AF18-5C225D6D4712}"
-EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SinacorTestDev.WebAPI.Infrastructure", "SinacorTestDev.WebAPI.Infrastructure\SinacorTestDev.WebAPI.Infrastructure.csproj", "{884980A7-1A31-40AE-991B-E03658185F49}"
-EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SinacorTestDev.WebAPI.Services", "SinacorTestDev.WebAPI.Services\SinacorTestDev.WebAPI.Services.csproj", "{9BC6FF08-D4E9-4C1F-8817-476B5A0F2A3F}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SinacorTestDev.WebAPI", "SinacorTestDev.WebAPI\SinacorTestDev.WebAPI.csproj", "{3B567923-BE82-4EAA-82C5-890839475FE9}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -29,27 +15,9 @@ Global
 		{3B567923-BE82-4EAA-82C5-890839475FE9}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{3B567923-BE82-4EAA-82C5-890839475FE9}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{3B567923-BE82-4EAA-82C5-890839475FE9}.Release|Any CPU.Build.0 = Release|Any CPU
-		{36039302-5442-4310-AF18-5C225D6D4712}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{36039302-5442-4310-AF18-5C225D6D4712}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{36039302-5442-4310-AF18-5C225D6D4712}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{36039302-5442-4310-AF18-5C225D6D4712}.Release|Any CPU.Build.0 = Release|Any CPU
-		{884980A7-1A31-40AE-991B-E03658185F49}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{884980A7-1A31-40AE-991B-E03658185F49}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{884980A7-1A31-40AE-991B-E03658185F49}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{884980A7-1A31-40AE-991B-E03658185F49}.Release|Any CPU.Build.0 = Release|Any CPU
-		{9BC6FF08-D4E9-4C1F-8817-476B5A0F2A3F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{9BC6FF08-D4E9-4C1F-8817-476B5A0F2A3F}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{9BC6FF08-D4E9-4C1F-8817-476B5A0F2A3F}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{9BC6FF08-D4E9-4C1F-8817-476B5A0F2A3F}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
-	EndGlobalSection
-	GlobalSection(NestedProjects) = preSolution
-		{3B567923-BE82-4EAA-82C5-890839475FE9} = {C133E498-BE8C-4FB7-BE36-EA05B9A1A806}
-		{36039302-5442-4310-AF18-5C225D6D4712} = {14E77246-2CC9-4C08-9987-12C70994FEE6}
-		{884980A7-1A31-40AE-991B-E03658185F49} = {123A4E41-A147-465A-8391-F5F491BDB3B9}
-		{9BC6FF08-D4E9-4C1F-8817-476B5A0F2A3F} = {C627B84F-CA35-4FA0-A3BC-A4105DC9BA7C}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {1A90C507-D8A3-4206-9DA3-1B360439A2EA}
