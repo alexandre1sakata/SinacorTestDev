@@ -9,7 +9,9 @@ import { UserTask } from '../../models/UserTask';
 })
 export class UserTasksComponent {
 
-  userTasks!: UserTask[];
+  searchTaskname: string = '';
+
+  userTasks: UserTask[] = [];
 
   constructor(private userTaskService: UserTaskService){
     this.loadTasks();
@@ -26,6 +28,16 @@ export class UserTasksComponent {
     this.userTaskService.updateTaskStatus(userTask.id, newStatus).subscribe();
     this.loadTasks();
     location.reload();
+  }
+
+  searchTaskByName(){
+    console.log('term', this.searchTaskname);
+    
+    if(this.searchTaskname == undefined) return;
+    
+    this.userTaskService.getTaskByName(this.searchTaskname).subscribe(data => {
+      this.userTasks = data;
+    });
   }
 
   getStatusList(){

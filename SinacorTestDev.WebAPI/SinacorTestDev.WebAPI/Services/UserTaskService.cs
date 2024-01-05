@@ -16,7 +16,7 @@ public class UserTaskService : IUserTaskService
     public IEnumerable<UserTask>? GetAll() 
         => _userTaskRepository.SelectAll();
 
-    public UserTask? GetByName(string taskName) 
+    public IEnumerable<UserTask>? GetByName(string taskName)
         => _userTaskRepository.SelectByName(taskName);
 
     public void Add(UserTask userTask) 

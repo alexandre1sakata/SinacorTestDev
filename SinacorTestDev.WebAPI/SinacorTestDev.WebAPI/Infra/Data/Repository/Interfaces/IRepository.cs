@@ -3,7 +3,7 @@
 public interface IRepository<T>
 {
     IEnumerable<T>? SelectAll();
-    T? SelectByName(string name);
+    IEnumerable<T>? SelectByName(string name);
     T? SelectById(int id);
     void Insert(T entity);
     void Update(T entity);

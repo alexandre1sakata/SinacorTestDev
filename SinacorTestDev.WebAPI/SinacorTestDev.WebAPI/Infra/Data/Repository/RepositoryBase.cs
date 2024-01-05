@@ -1,6 +1,8 @@
 ﻿using Microsoft.EntityFrameworkCore;
 using SinacorTestDev.WebAPI.Infra.Data.Context;
 using SinacorTestDev.WebAPI.Infra.Data.Repository.Interfaces;
+using SinacorTestDev.WebAPI.Models;
+using System.Reflection;
 
 namespace SinacorTestDev.WebAPI.Infra.Data.Repository;
 
@@ -18,8 +20,8 @@ public class RepositoryBase<T> : IRepository<T> where T : class
     public IEnumerable<T>? SelectAll() 
         => _dbSet.ToList();
 
-    public T? SelectByName(string name) 
-        => _dbSet.Find(name);
+    public IEnumerable<T>? SelectByName(string name)
+     => _dbSet.Where(entity => (entity as UserTask).Name.Contains(name));
 
     public T? SelectById(int id)
         => _dbSet.Find(id);

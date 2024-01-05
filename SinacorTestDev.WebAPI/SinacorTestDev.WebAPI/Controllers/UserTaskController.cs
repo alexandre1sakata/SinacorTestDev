@@ -22,7 +22,7 @@ public class UserTaskController : ControllerBase
     }
 
     [HttpGet("{taskName}")]
-    public ActionResult<UserTask> GetTaskByName(string taskName)
+    public ActionResult<List<UserTask>> GetTaskByName(string taskName)
     {
         var result = _userTaskService.GetByName(taskName);
         if (result is null)
