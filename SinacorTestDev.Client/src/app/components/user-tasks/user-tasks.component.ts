@@ -11,9 +11,7 @@ import { Router } from '@angular/router';
 export class UserTasksComponent {
 
   statusTask = ["Pendente", "Iniciada", "Finalizada"];
-
   searchTaskname: string = '';
-
   userTasks: UserTask[] = [];
 
   constructor(

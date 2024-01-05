@@ -53,7 +53,7 @@ public class UserTaskController : ControllerBase
     [HttpPut("ChangeStatus/{id}/{newStatus}")]
     public ActionResult ChangeTaskStatus(int id, string newStatus)
     {
-        _userTaskService.ChangeTaskStatus(id, newStatus);
+        _userTaskService.ChangeTaskStatusInQueue(id, newStatus);
         return Ok();
     }
 

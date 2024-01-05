@@ -7,10 +7,14 @@ namespace SinacorTestDev.WebAPI.Services;
 public class UserTaskService : IUserTaskService
 {
     private readonly IRepository<UserTask> _userTaskRepository;
+    private readonly IRabbitManagementService _rabbitManagementService;
 
-    public UserTaskService(IRepository<UserTask> userTaskRepository)
+    public UserTaskService(
+        IRepository<UserTask> userTaskRepository, 
+        IRabbitManagementService rabbitManagementService)
     {
         _userTaskRepository = userTaskRepository;
+        _rabbitManagementService = rabbitManagementService;
     }
 
     public IEnumerable<UserTask>? GetAll() 
@@ -34,13 +38,16 @@ public class UserTaskService : IUserTaskService
         _userTaskRepository.Delete(userTask);
     }
 
-    public void ChangeTaskStatus(int taskId, string newStatus)
+    public void ChangeTaskStatusInQueue(int taskId, string newStatus)
     {
         var userTask = _userTaskRepository.SelectById(taskId);
         userTask.Status = newStatus;
 
-        //call rabbimq
+        _rabbitManagementService.SendObjectMessage(userTask);
+    }
 
+    public void ChangeTaskStatus(UserTask userTask)
+    {
         _userTaskRepository.Update(userTask);
     }
 }

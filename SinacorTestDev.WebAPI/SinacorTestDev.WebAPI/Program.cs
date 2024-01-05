@@ -8,6 +8,8 @@ using SinacorTestDev.WebAPI.Services;
 using SinacorTestDev.WebAPI.Services.Interface;
 using System.Collections.ObjectModel;
 using System.Data;
+using SinacorTestDev.WebAPI.Infra.RabbitMQ.Interfaces;
+using SinacorTestDev.WebAPI.Infra.RabbitMQ;
 
 var allowOrigins = "_allowOrigins";
 
@@ -29,6 +31,9 @@ builder.Services.AddDbContext<TaskContext>(options =>
 // Add services to the container.
 builder.Services.AddScoped(typeof(IRepository<>), typeof(RepositoryBase<>));
 builder.Services.AddScoped<IUserTaskService, UserTaskService>();
+builder.Services.AddScoped<IRabbitManagementService, RabbitManagementService>();
+builder.Services.AddTransient<IRabbitMQProducer, RabbitMQProducer>();
+builder.Services.AddTransient<IRabbitMQConsumer, RabbitMQConsumer>();
 
 Log.Logger = new LoggerConfiguration().CreateBootstrapLogger();
 builder.Host.UseSerilog(((ctx, lc) => lc

@@ -8,6 +8,7 @@ public interface IUserTaskService
     IEnumerable<UserTask>? GetByName(string taskName);
     void Add(UserTask entity);
     void Modify(UserTask entity);
-    void ChangeTaskStatus(int taskId, string newStatus);
+    void ChangeTaskStatusInQueue(int taskId, string newStatus);
+    void ChangeTaskStatus(UserTask userTask);
     void Remove(int id);
 }
