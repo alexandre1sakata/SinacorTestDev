@@ -5,9 +5,21 @@ using SinacorTestDev.WebAPI.Infra.Data.Repository.Interfaces;
 using SinacorTestDev.WebAPI.Services;
 using SinacorTestDev.WebAPI.Services.Interface;
 
+var allowOrigins = "_allowOrigins";
+
 var builder = WebApplication.CreateBuilder(args);
 
-builder.Services.AddDbContext<TaskContext>(options => 
+builder.Services.AddCors(options =>
+{
+    options.AddPolicy(name: allowOrigins, policy =>
+                      {
+                          policy.AllowAnyOrigin()
+                                .AllowAnyHeader()
+                                .AllowAnyMethod();
+                      });
+});
+
+builder.Services.AddDbContext<TaskContext>(options =>
     options.UseSqlServer(builder.Configuration.GetConnectionString("TaskContext")));
 
 // Add services to the container.
@@ -27,6 +39,8 @@ if (app.Environment.IsDevelopment())
     app.UseSwagger();
     app.UseSwaggerUI();
 }
+
+app.UseCors(allowOrigins);
 
 app.UseHttpsRedirection();
 

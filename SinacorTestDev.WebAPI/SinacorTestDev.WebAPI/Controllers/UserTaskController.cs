@@ -22,7 +22,7 @@ public class UserTaskController : ControllerBase
     }
 
     [HttpGet("{taskName}")]
-    public ActionResult<UserTask> GetSingleHero(string taskName)
+    public ActionResult<UserTask> GetTaskByName(string taskName)
     {
         var result = _userTaskService.GetByName(taskName);
         if (result is null)
@@ -32,21 +32,28 @@ public class UserTaskController : ControllerBase
     }
 
     [HttpPost]
-    public ActionResult<List<UserTask>> AddHero(UserTask userTask)
+    public ActionResult AddTask(UserTask userTask)
     {
         _userTaskService.Add(userTask);
         return Ok();
     }
 
     [HttpPut("{id}")]
-    public ActionResult<List<UserTask>> ModifyUserTask(UserTask userTask)
+    public ActionResult ModifyUserTask(UserTask userTask)
     {
         _userTaskService.Modify(userTask);
         return Ok();
     }
 
+    [HttpPut("ChangeStatus/{id}/{newStatus}")]
+    public ActionResult ChangeTaskStatus(int id, string newStatus)
+    {
+        _userTaskService.ChangeTaskStatus(id, newStatus);
+        return Ok();
+    }
+
     [HttpDelete("{id}")]
-    public ActionResult<List<UserTask>> RemoveUserTask(int id)
+    public ActionResult RemoveUserTask(int id)
     {
         _userTaskService.Remove(id);
         return Ok();

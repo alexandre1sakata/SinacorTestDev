@@ -1,8 +1,8 @@
 export interface UserTask{
-    Id: number;
-    Name: string;
-    Description: string;
-    Status: string;
-    CreatedDate: Date;
-    ModifiedDate: Date;
+    id: number;
+    name: string;
+    description: string;
+    status: string;
+    createdDate: Date;
+    modifiedDate: Date;
 }

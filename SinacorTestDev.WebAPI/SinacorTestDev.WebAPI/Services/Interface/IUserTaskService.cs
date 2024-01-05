@@ -8,5 +8,6 @@ public interface IUserTaskService
     UserTask? GetByName(string taskName);
     void Add(UserTask entity);
     void Modify(UserTask entity);
+    void ChangeTaskStatus(int taskId, string newStatus);
     void Remove(int id);
 }

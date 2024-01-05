@@ -1,1 +1,41 @@
-<p>user-tasks works!</p>
+<main>
+    <div class="title">
+        <h4>Tarefas</h4>
+    </div>
+    <hr class="solid">
+    <div class="main-actions">
+        <button type="button" class="btn btn-outline-primary">Cadastrar nova tarefa</button>
+        <form class="form-inline my-2 my-lg-0">
+            <input class="form-control mr-sm-2" type="search" placeholder="Pesquisar" aria-label="Pesquisar">
+            <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Consultar tarefas</button>
+        </form>
+    </div>
+    <hr class="solid">
+    <div class="tasks-list">
+        <div *ngFor="let status of getStatusList()" class="tasks-status-column">
+            <label>{{status}}</label>
+            <div *ngFor="let task of userTasks">
+                <div class="card-task" *ngIf="task.status.toLowerCase() === status.toLowerCase()">
+                    <div class="name-task">
+                        <label>{{task.name}}</label>
+                    </div>
+                    <hr class="solid">
+                    <div class="task-info">
+                        <small>Descrição: {{task.description}}</small>
+                        <small>Status: {{task.status}}</small>
+                        <small>Data de Criação: {{task.createdDate | date: 'dd/MM/yyyy' }}</small>
+                    </div>
+                    <hr class="solid">
+                    <div class="btn-actions-task">
+                        <button *ngIf="task.status !== 'finalizada'" type="button" 
+                            class="btn-style btn btn-outline-success btn-sm" (click)="changeStatus(task)">
+                            {{task.status == 'pendente' ? 'Iniciar' : 'Finalizar'}}
+                        </button>
+                        <button type="button" class="btn-style btn btn-outline-warning btn-sm" [routerLink]="['/userTaskEdit/', task.id]">Editar</button>
+                        <button type="button" class="btn-style btn btn-outline-danger btn-sm">Excluir</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</main>

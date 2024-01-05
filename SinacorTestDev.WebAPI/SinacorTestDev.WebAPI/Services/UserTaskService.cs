@@ -30,4 +30,14 @@ public class UserTaskService : IUserTaskService
         var userTask = _userTaskRepository.SelectById(id);
         _userTaskRepository.Delete(userTask);
     }
+
+    public void ChangeTaskStatus(int taskId, string newStatus)
+    {
+        var userTask = _userTaskRepository.SelectById(taskId);
+        userTask.Status = newStatus;
+
+        //call rabbimq
+
+        _userTaskRepository.Update(userTask);
+    }
 }

@@ -1,0 +1,46 @@
+main {
+    margin: 30px;
+    text-align: center;
+}
+
+main .main-actions {
+    display: flex;
+    justify-content: space-between;
+}
+
+main .tasks-list {
+    margin: 40px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+main .card-task {
+    border-style: groove;
+    border-radius: 17px;
+    padding: 18px
+}
+
+main .name-task{
+    font-size: smaller;
+    height: 15px;
+}
+
+main .task-info {
+    display: grid;
+    text-align: left;
+    font-size: smaller;
+}
+
+main .btn-actions-task {
+    display: flex;
+    justify-content: space-around;
+}
+
+main .btn-style {
+    display: flex;
+    font-size: 9px;
+    width: 27%;
+    height: 10%;
+    justify-content: center;
+}

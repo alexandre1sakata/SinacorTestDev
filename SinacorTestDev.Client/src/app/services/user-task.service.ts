@@ -22,16 +22,24 @@ export class UserTaskService {
   getAllTasks(): Observable<UserTask[]> {
     return this.httpClient.get<UserTask[]>(this.apiUrl)
   }
+
   getTaskByName(id: number): Observable<UserTask> {
     return this.httpClient.get<UserTask>(`${this.apiUrl}/${id}`);
   }
+
   createTask(userTask: UserTask): Observable<UserTask> {
     return this.httpClient.post<UserTask>(this.apiUrl, JSON.stringify(userTask), this.httpOptions);
   }
+
   updateTask(id: number, userTask: UserTask): Observable<UserTask> {
     return this.httpClient.put<UserTask>(`${this.apiUrl}/${id}`, JSON.stringify(userTask), this.httpOptions);
   }
+
   deleteTask(id: number): Observable<any> {
     return this.httpClient.delete<UserTask>(`${this.apiUrl}/${id}`);
+  }
+
+  updateTaskStatus(id: number, newStatus: string) : Observable<any> {
+    return this.httpClient.put<UserTask>(`${this.apiUrl}/ChangeStatus/${id}/${newStatus}`, this.httpOptions);
   }
 }
