@@ -1,5 +1,5 @@
 {
-  "name": "sinacor-test-dev.client-app",
+  "name": "sinacor-test-dev.client",
   "version": "0.0.0",
   "scripts": {
     "ng": "ng",
