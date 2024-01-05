@@ -1,0 +1,26 @@
+<main>
+    <div class="title">
+        <h4>Cadastrando nova tarefa</h4>
+    </div>
+    <hr class="solid">
+    <div class="div-form">
+        <form class="form-group" [formGroup]="taskForm" (ngSubmit)="onSubmit()">
+            <div class="form-group">
+                <label>Nome da task</label>
+                <input type="text" class="form-control" id="inputNameTask" placeholder="Insira um nome" formControlName="name">
+            </div>
+            <div class="form-group">
+                <label>Descrição</label>
+                <input type="text" class="form-control" id="inputDescriptionTask" placeholder="Insira uma descrição" formControlName="description">
+            </div>
+            <div class="form-group">
+                <label>Status</label>
+                <input type="text" readonly class="form-control" id="inputStatusTask" value="pendente" formControlName="status">
+            </div>
+            <div class="btn-actions-form">
+                <button type="submit" class="btn btn-outline-primary">Submit</button>
+                <button type="reset" class="btn btn-outline-danger" [routerLink]="['/tasks']">Cancelar</button>
+            </div>
+          </form>
+    </div>
+</main>

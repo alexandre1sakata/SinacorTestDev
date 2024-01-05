@@ -4,7 +4,7 @@
     </div>
     <hr class="solid">
     <div class="main-actions">
-        <button type="button" class="btn btn-outline-primary">Cadastrar nova tarefa</button>
+        <button type="button" class="btn btn-outline-primary" (click)="redirectToCreateTask()">Cadastrar nova tarefa</button>
         <form class="form-inline my-2 my-lg-0" (ngSubmit)="searchTaskByName()">
             <input class="form-control mr-sm-2" type="search" placeholder="Pesquisar" aria-label="Pesquisar" [(ngModel)]="searchTaskname" [ngModelOptions]="{standalone: true}">
             <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Consultar tarefas</button>
@@ -32,7 +32,7 @@
                             {{task.status == 'pendente' ? 'Iniciar' : 'Finalizar'}}
                         </button>
                         <button type="button" class="btn-style btn btn-outline-warning btn-sm" [routerLink]="['/userTaskEdit/', task.id]">Editar</button>
-                        <button type="button" class="btn-style btn btn-outline-danger btn-sm">Excluir</button>
+                        <button type="button" class="btn-style btn btn-outline-danger btn-sm" (click)="removeTask(task.id)">Excluir</button>
                     </div>
                 </div>
             </div>

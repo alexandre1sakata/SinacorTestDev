@@ -18,7 +18,8 @@ main .tasks-list {
 main .card-task {
     border-style: groove;
     border-radius: 17px;
-    padding: 18px
+    padding: 18px;
+    margin: 15px 0px;
 }
 
 main .name-task{

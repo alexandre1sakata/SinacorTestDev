@@ -19,8 +19,11 @@ public class UserTaskService : IUserTaskService
     public IEnumerable<UserTask>? GetByName(string taskName)
         => _userTaskRepository.SelectByName(taskName);
 
-    public void Add(UserTask userTask) 
-        => _userTaskRepository.Insert(userTask);
+    public void Add(UserTask userTask)
+    {
+        userTask.CreatedDate = DateTime.Now;
+        _userTaskRepository.Insert(userTask);
+    }
 
     public void Modify(UserTask entity) 
         => _userTaskRepository.Update(entity);
