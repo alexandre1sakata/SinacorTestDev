@@ -9,10 +9,12 @@ namespace SinacorTestDev.WebAPI.Controllers;
 public class UserTaskController : ControllerBase
 {
     private readonly IUserTaskService _userTaskService;
+    private readonly ILogger<UserTaskController> _logger;
 
-    public UserTaskController(IUserTaskService userTaskService)
+    public UserTaskController(IUserTaskService userTaskService, ILogger<UserTaskController> logger)
     {
         _userTaskService = userTaskService;
+        _logger = logger;
     }
 
     [HttpGet]
@@ -25,8 +27,11 @@ public class UserTaskController : ControllerBase
     public ActionResult<List<UserTask>> GetTaskByName(string taskName)
     {
         var result = _userTaskService.GetByName(taskName);
-        if (result is null)
+        if (result is null || result.Count() == 0)
+        {
+            _logger.LogError("Task not found.");
             return NotFound("Task not found.");
+        }
 
         return Ok(result);
     }

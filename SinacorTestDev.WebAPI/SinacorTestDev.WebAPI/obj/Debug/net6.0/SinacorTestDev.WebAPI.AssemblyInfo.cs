@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("SinacorTestDev.WebAPI")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+ce0ad188d801aa67ba34f26a1fbdd51d5dad28e8")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+0c04b147db7131e18c5608fef51bf5bc1b587db1")]
 [assembly: System.Reflection.AssemblyProductAttribute("SinacorTestDev.WebAPI")]
 [assembly: System.Reflection.AssemblyTitleAttribute("SinacorTestDev.WebAPI")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

@@ -1,9 +1,13 @@
 using Microsoft.EntityFrameworkCore;
+using Serilog.Sinks.MSSqlServer;
+using Serilog;
 using SinacorTestDev.WebAPI.Infra.Data.Context;
 using SinacorTestDev.WebAPI.Infra.Data.Repository;
 using SinacorTestDev.WebAPI.Infra.Data.Repository.Interfaces;
 using SinacorTestDev.WebAPI.Services;
 using SinacorTestDev.WebAPI.Services.Interface;
+using System.Collections.ObjectModel;
+using System.Data;
 
 var allowOrigins = "_allowOrigins";
 
@@ -26,6 +30,10 @@ builder.Services.AddDbContext<TaskContext>(options =>
 builder.Services.AddScoped(typeof(IRepository<>), typeof(RepositoryBase<>));
 builder.Services.AddScoped<IUserTaskService, UserTaskService>();
 
+Log.Logger = new LoggerConfiguration().CreateBootstrapLogger();
+builder.Host.UseSerilog(((ctx, lc) => lc
+.ReadFrom.Configuration(ctx.Configuration)));
+
 builder.Services.AddControllers();
 // Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
 builder.Services.AddEndpointsApiExplorer();
@@ -39,6 +47,8 @@ if (app.Environment.IsDevelopment())
     app.UseSwagger();
     app.UseSwaggerUI();
 }
+
+app.UseSerilogRequestLogging();
 
 app.UseCors(allowOrigins);
 
