@@ -1,9 +1,18 @@
 # SinacorTestDev
 Esta é uma aplicação para a candidatura de vaga como Desenvolvedor Fullstack na empresa B3 / Sinacor.
 
-Sistema para cadastrar e consultar tarefas, utilizando uma ASPNET Core WebAPI e Angular app.
+### Orientações do teste:
+- Construir uma app para cadastro e consulta de tarefas (descrição/data/status).
+- Arquitetura, página em Angular + API +  Worker com comunicação via RabbitMQ em .Net6  C#.
+* _Itens relevantes:_
+- Ter logs para suporte da aplicação.
+- Aplicação de design patterns.
+- Utilização de framework de persistência.
+- Banco de dados livre.
 
-Seguindo as orientações do teste, nessa aplicação é possível ver a listagem de tarefas, cadastrar novas tarefas, editar e buscar pelo nome das tarefas.
+Portanto seguindo essas orientações, nessa aplicação é possível visualizar a listagem de tarefas, cadastrar e editar as tarefas, além de um campo para buscar as tarefas pelo nome;
+
+Sistema utilizando uma API com ASPNET Core WebAPI e páginas em Angular;
 
 A seguir algumas tecnologias utilizadas para implementar essas regras solicitadas:
 
