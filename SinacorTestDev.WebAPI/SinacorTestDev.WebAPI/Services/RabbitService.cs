@@ -3,14 +3,12 @@ using SinacorTestDev.WebAPI.Services.Interface;
 
 namespace SinacorTestDev.WebAPI.Services;
 
-public class RabbitManagementService : IRabbitManagementService
+public class RabbitService : IRabbitService
 {
     private readonly IRabbitMQProducer _rabbitProcuder;
 
-    public RabbitManagementService(IRabbitMQProducer rabbitProcuder)
-    {
-        _rabbitProcuder = rabbitProcuder;
-    }
+    public RabbitService(IRabbitMQProducer rabbitProcuder)
+        => _rabbitProcuder = rabbitProcuder;
 
     public void SendObjectMessage<T>(T objectMessage)
     {

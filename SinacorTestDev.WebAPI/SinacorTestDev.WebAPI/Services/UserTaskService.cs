@@ -7,11 +7,11 @@ namespace SinacorTestDev.WebAPI.Services;
 public class UserTaskService : IUserTaskService
 {
     private readonly IRepository<UserTask> _userTaskRepository;
-    private readonly IRabbitManagementService _rabbitManagementService;
+    private readonly IRabbitService _rabbitManagementService;
 
     public UserTaskService(
         IRepository<UserTask> userTaskRepository, 
-        IRabbitManagementService rabbitManagementService)
+        IRabbitService rabbitManagementService)
     {
         _userTaskRepository = userTaskRepository;
         _rabbitManagementService = rabbitManagementService;

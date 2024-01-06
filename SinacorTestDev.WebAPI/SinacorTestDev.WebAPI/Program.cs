@@ -31,10 +31,13 @@ builder.Services.AddDbContext<TaskContext>(options =>
 // Add services to the container.
 builder.Services.AddScoped(typeof(IRepository<>), typeof(RepositoryBase<>));
 builder.Services.AddScoped<IUserTaskService, UserTaskService>();
-builder.Services.AddScoped<IRabbitManagementService, RabbitManagementService>();
-builder.Services.AddTransient<IRabbitMQProducer, RabbitMQProducer>();
-builder.Services.AddTransient<IRabbitMQConsumer, RabbitMQConsumer>();
+builder.Services.AddScoped<IRabbitService, RabbitService>();
+builder.Services.AddScoped<IRabbitMQProducer, RabbitMQProducer>();
+builder.Services
+    .AddSingleton<IRabbitMQConsumer, RabbitMQConsumer>()
+    .AddHostedService<RabbitMQManagementService>();
 
+// logs
 Log.Logger = new LoggerConfiguration().CreateBootstrapLogger();
 builder.Host.UseSerilog(((ctx, lc) => lc
 .ReadFrom.Configuration(ctx.Configuration)));

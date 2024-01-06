@@ -1,6 +1,6 @@
 ﻿namespace SinacorTestDev.WebAPI.Services.Interface
 {
-    public interface IRabbitManagementService
+    public interface IRabbitService
     {
         void SendObjectMessage<T>(T objectMessage);
     }

@@ -1,6 +1,8 @@
 ﻿using Newtonsoft.Json;
 using RabbitMQ.Client;
+using RabbitMQ.Client.Events;
 using SinacorTestDev.WebAPI.Infra.RabbitMQ.Interfaces;
+using SinacorTestDev.WebAPI.Models;
 using System.Text;
 
 namespace SinacorTestDev.WebAPI.Infra.RabbitMQ;

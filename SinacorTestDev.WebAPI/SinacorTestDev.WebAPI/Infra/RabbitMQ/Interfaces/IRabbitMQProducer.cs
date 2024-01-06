@@ -1,4 +1,6 @@
-﻿namespace SinacorTestDev.WebAPI.Infra.RabbitMQ.Interfaces;
+﻿using RabbitMQ.Client;
+
+namespace SinacorTestDev.WebAPI.Infra.RabbitMQ.Interfaces;
 
 public interface IRabbitMQProducer
 {

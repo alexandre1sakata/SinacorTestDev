@@ -1,7 +1,8 @@
-﻿namespace SinacorTestDev.WebAPI.Infra.RabbitMQ.Interfaces
+﻿using RabbitMQ.Client;
+
+namespace SinacorTestDev.WebAPI.Infra.RabbitMQ.Interfaces;
+
+public interface IRabbitMQConsumer
 {
-    public interface IRabbitMQConsumer
-    {
-        void ConsumeMessage();
-    }
+    Task ConsumeMessage(IModel channel, string routingKey, CancellationToken stoppingToken);
 }
