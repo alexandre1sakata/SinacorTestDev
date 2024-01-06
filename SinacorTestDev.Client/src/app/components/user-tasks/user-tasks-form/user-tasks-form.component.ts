@@ -22,7 +22,7 @@ export class UserTasksFormComponent implements OnInit {
     private activRoute: ActivatedRoute
   ){
     this.taskForm = this.formBuilder.group({
-      id: [''],
+      id: [0],
       name: ['', Validators.required],
       description: ['', Validators.required],
       status: ['pendente', Validators.required],
@@ -56,7 +56,8 @@ export class UserTasksFormComponent implements OnInit {
       } else {
         this.userTaskService.updateTask(this.taskForm.value.id, this.taskForm.value).subscribe();
       }
-      this.router.navigateByUrl('/tasks');
+      alert(`Tarefa ${this.isEditTask ? 'salva' : 'criada'}!`);
+      setTimeout( () => { this.router.navigateByUrl('/tasks'); }, 1000 );
     }
   }
 }

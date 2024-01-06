@@ -34,7 +34,7 @@ public class RabbitMQConsumer : IRabbitMQConsumer
             using (var scope = _serviceProvider.CreateScope())
             {
                 var userTaskService = scope.ServiceProvider.GetRequiredService<IUserTaskService>();
-                userTaskService.Modify(userTask);
+                userTaskService.ChangeTaskStatus(userTask);
             }
         };
 

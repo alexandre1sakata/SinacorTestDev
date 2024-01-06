@@ -2,6 +2,7 @@ import { Component } from '@angular/core';
 import { UserTaskService } from '../../services/user-task.service';
 import { UserTask } from '../../models/UserTask';
 import { Router } from '@angular/router';
+import { Observable } from 'rxjs';
 
 @Component({
   selector: 'app-user-tasks',
@@ -12,7 +13,7 @@ export class UserTasksComponent {
 
   statusTask = ["Pendente", "Iniciada", "Finalizada"];
   searchTaskname: string = '';
-  userTasks: UserTask[] = [];
+  userTasks$!: Observable<UserTask[]>;
 
   constructor(
     private userTaskService: UserTaskService, 
@@ -22,24 +23,21 @@ export class UserTasksComponent {
   }
 
   loadTasks(){
-    this.userTaskService.getAllTasks().subscribe(data => {
-      this.userTasks = data;
-    })
+    this.userTasks$ = this.userTaskService.getAllTasks();
   }
 
   changeStatus(userTask: UserTask) {
     let newStatus = userTask.status == 'pendente' ? "iniciada" : "finalizada";
+    
     this.userTaskService.updateTaskStatus(userTask.id, newStatus).subscribe(() => {
-      this.loadTasks();
+      setTimeout( () => { this.loadTasks(); }, 1000 );
     });
   }
 
   searchTaskByName(){
     if(this.searchTaskname == undefined) return;
     
-    this.userTaskService.getTasksByName(this.searchTaskname).subscribe(data => {
-      this.userTasks = data;
-    });
+    this.userTasks$ = this.userTaskService.getTasksByName(this.searchTaskname);
   }
 
   getStatusList(){

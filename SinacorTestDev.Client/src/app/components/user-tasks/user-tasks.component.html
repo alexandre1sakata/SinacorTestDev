@@ -14,7 +14,7 @@
     <div class="tasks-list">
         <div *ngFor="let status of getStatusList()" class="tasks-status-column">
             <label>{{status}}</label>
-            <div *ngFor="let task of userTasks">
+            <div *ngFor="let task of userTasks$ | async">
                 <div class="card-task" *ngIf="task.status.toLowerCase() === status.toLowerCase()">
                     <div class="name-task">
                         <label>{{task.name}}</label>
