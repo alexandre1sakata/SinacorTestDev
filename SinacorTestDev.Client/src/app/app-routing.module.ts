@@ -4,6 +4,7 @@ import { UserTasksFormComponent } from './components/user-tasks/user-tasks-form/
 import { UserTasksComponent } from './components/user-tasks/user-tasks.component';
 
 const routes: Routes = [
+  { path: 'edit-task/:id', component: UserTasksFormComponent},
   { path: 'create-task', component: UserTasksFormComponent},
   { path: 'tasks', component: UserTasksComponent },
   { path: '', redirectTo: '/tasks', pathMatch: 'full' },

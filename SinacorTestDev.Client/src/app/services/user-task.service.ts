@@ -23,8 +23,12 @@ export class UserTaskService {
     return this.httpClient.get<UserTask[]>(this.apiUrl)
   }
 
-  getTaskByName(taskName: string): Observable<UserTask[]> {
-    return this.httpClient.get<UserTask[]>(`${this.apiUrl}/${taskName}`);
+  getTasksByName(taskName: string): Observable<UserTask[]> {
+    return this.httpClient.get<UserTask[]>(`${this.apiUrl}/GetByName/${taskName}`);
+  }
+
+  getTaskById(id: number): Observable<UserTask> {
+    return this.httpClient.get<UserTask>(`${this.apiUrl}/${id}`);
   }
 
   createTask(userTask: UserTask): Observable<UserTask> {

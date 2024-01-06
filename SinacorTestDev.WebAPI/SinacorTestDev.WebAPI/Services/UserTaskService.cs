@@ -20,8 +20,11 @@ public class UserTaskService : IUserTaskService
     public IEnumerable<UserTask>? GetAll() 
         => _userTaskRepository.SelectAll();
 
-    public IEnumerable<UserTask> GetByName(string taskName)
+    public IEnumerable<UserTask> GetTasksByName(string taskName)
         => _userTaskRepository.SelectByName(taskName);
+
+    public UserTask? GetTaskById(int id)
+        => _userTaskRepository.SelectById(id);
 
     public void Add(UserTask userTask)
     {
@@ -31,8 +34,13 @@ public class UserTaskService : IUserTaskService
 
     public void Modify(UserTask userTask)
     {
-        userTask.SetLastModifiedDate();
-        _userTaskRepository.Update(userTask);
+        var userTaskDb = _userTaskRepository.SelectById(userTask.Id);
+
+        userTaskDb.SetName(userTask.Name);
+        userTaskDb.SetDescription(userTask.Description);
+        userTaskDb.SetLastModifiedDate();
+
+        _userTaskRepository.Update(userTaskDb);
     }
 
     public void Remove(int id)

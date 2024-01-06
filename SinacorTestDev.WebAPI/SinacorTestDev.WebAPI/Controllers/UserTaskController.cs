@@ -24,12 +24,22 @@ public class UserTaskController : ControllerBase
         return Ok(result);
     }
 
-    [HttpGet("{taskName}")]
-    public ActionResult<List<UserTask>> GetTaskByName(string taskName)
+    [HttpGet("GetByName/{taskName}")]
+    public ActionResult<List<UserTask>> GetTasksByName(string taskName)
     {
-        var result = _userTaskService.GetByName(taskName);
+        var result = _userTaskService.GetTasksByName(taskName);
 
         if (!result.Any()) return NotFound("Task not found.");
+
+        return Ok(result);
+    }
+
+    [HttpGet("{id}")]
+    public ActionResult<List<UserTask>> GetTaskById(int id)
+    {
+        var result = _userTaskService.GetTaskById(id);
+
+        if (result == null) return NotFound("Task not found.");
 
         return Ok(result);
     }
@@ -66,14 +76,4 @@ public class UserTaskController : ControllerBase
         _userTaskService.Remove(id);
         return Ok();
     }
-
-    #region Private Methods
-
-    private ActionResult LogError(Exception ex)
-    {
-        _logger.LogError(ex.Message);
-        return StatusCode(500, ex.Message);
-    }
-
-    #endregion
 }

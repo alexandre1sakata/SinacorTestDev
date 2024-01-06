@@ -31,8 +31,8 @@
                             class="btn-style btn btn-outline-success btn-sm" (click)="changeStatus(task)">
                             {{task.status == 'pendente' ? 'Iniciar' : 'Finalizar'}}
                         </button>
-                        <button type="button" class="btn-style btn btn-outline-warning btn-sm" [routerLink]="['/userTaskEdit/', task.id]">Editar</button>
-                        <button type="button" class="btn-style btn btn-outline-danger btn-sm" (click)="removeTask(task.id)">Excluir</button>
+                        <button type="button" class="btn-style btn btn-outline-warning btn-sm" [routerLink]="['/edit-task/', task.id]">Editar</button>
+                        <button type="button" class="btn-style btn btn-outline-danger btn-sm" (click)="removeTask(task.id, task.name)">Excluir</button>
                     </div>
                 </div>
             </div>

@@ -50,6 +50,12 @@ public class UserTask
     public void SetLastModifiedDate()
         => LastModifiedDate = DateTime.Now;
 
+    public void SetName(string newName)
+        => Name = newName;
+
+    public void SetDescription(string newdescription)
+        => Description = newdescription;
+
     public string GetName()
         => Name;
 }

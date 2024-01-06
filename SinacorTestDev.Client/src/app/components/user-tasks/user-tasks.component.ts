@@ -35,11 +35,9 @@ export class UserTasksComponent {
   }
 
   searchTaskByName(){
-    console.log('term', this.searchTaskname);
-    
     if(this.searchTaskname == undefined) return;
     
-    this.userTaskService.getTaskByName(this.searchTaskname).subscribe(data => {
+    this.userTaskService.getTasksByName(this.searchTaskname).subscribe(data => {
       this.userTasks = data;
     });
   }
@@ -48,10 +46,14 @@ export class UserTasksComponent {
     return this.statusTask;
   }
 
-  removeTask(id: number){
-    this.userTaskService.deleteTask(id).subscribe(() => {
-      this.loadTasks();
-    });
+  removeTask(id: number, name: string){
+    const accept = confirm(`Dejesa excluir a task:  ${name} ?`);
+    if (accept) {
+      this.userTaskService.deleteTask(id).subscribe(() => {
+        alert('Task excluída!')
+        this.loadTasks();
+      });
+    }
   }
 
   redirectToCreateTask() {
