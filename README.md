@@ -5,7 +5,7 @@ Sistema para cadastrar e consultar tarefas, utilizando uma ASPNET Core WebAPI e 
 
 Seguindo as orientações do teste, nessa aplicação é possível ver a listagem de tarefas, cadastrar novas tarefas, editar e buscar pelo nome das tarefas.
 
-A seguir algumas ferramentas tecnologias utilizadas para implementar essas regras solicitadas:
+A seguir algumas tecnologias utilizadas para implementar essas regras solicitadas:
 
 ### Frameworks
 - Dotnet Core 6
