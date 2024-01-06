@@ -10,6 +10,7 @@ using System.Collections.ObjectModel;
 using System.Data;
 using SinacorTestDev.WebAPI.Infra.RabbitMQ.Interfaces;
 using SinacorTestDev.WebAPI.Infra.RabbitMQ;
+using SinacorTestDev.WebAPI.Middleware;
 
 var allowOrigins = "_allowOrigins";
 
@@ -55,6 +56,8 @@ if (app.Environment.IsDevelopment())
     app.UseSwagger();
     app.UseSwaggerUI();
 }
+
+app.UseMiddleware<ExceptionHandlingMiddleware>();
 
 app.UseSerilogRequestLogging();
 

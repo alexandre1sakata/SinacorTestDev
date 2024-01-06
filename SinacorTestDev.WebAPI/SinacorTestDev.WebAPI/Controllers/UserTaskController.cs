@@ -20,108 +20,51 @@ public class UserTaskController : ControllerBase
     [HttpGet]
     public ActionResult<List<UserTask>> GetAllTasks()
     {
-        try
-        {
-            if (!ModelState.IsValid) return BadRequest(ModelState);
-
-            var result = _userTaskService.GetAll();
-            return Ok(result);
-        }
-        catch (Exception ex)
-        {
-            _logger.LogError(ex.Message);
-            return StatusCode(500, ex.Message);
-        }
+        var result = _userTaskService.GetAll();
+        return Ok(result);
     }
 
     [HttpGet("{taskName}")]
     public ActionResult<List<UserTask>> GetTaskByName(string taskName)
     {
-        try
-        {
-            if (!ModelState.IsValid) return BadRequest(ModelState);
+        var result = _userTaskService.GetByName(taskName);
 
-            var result = _userTaskService.GetByName(taskName);
+        if (!result.Any()) return NotFound("Task not found.");
 
-            if (result?.Any() != null)
-            {
-                string message = "Task not found.";
-                _logger.LogError(message);
-                return NotFound(message);
-            }
-
-            return Ok(result);
-        }
-        catch (Exception ex)
-        {
-            return LogError(ex);
-        }
+        return Ok(result);
     }
 
     [HttpPost]
     public ActionResult AddTask(UserTask userTask)
     {
-        try
-        {
-            if (!ModelState.IsValid) return BadRequest(ModelState);
+        if (!ModelState.IsValid) return BadRequest(ModelState);
 
-            _userTaskService.Add(userTask);
-
-            return Ok();
-        }
-        catch (Exception ex)
-        {
-            return LogError(ex);
-        }
+        _userTaskService.Add(userTask);
+        return Ok();
     }
 
     [HttpPut("{id}")]
     public ActionResult ModifyUserTask(UserTask userTask)
     {
-        try
-        {
-            if (!ModelState.IsValid) return BadRequest(ModelState);
+        if (!ModelState.IsValid) return BadRequest(ModelState);
 
-            _userTaskService.Modify(userTask);
-            return Ok();
-        }
-        catch (Exception ex)
-        {
-            return LogError(ex);
-        }
-        
+        _userTaskService.Modify(userTask);
+        return Ok();
+
     }
 
     [HttpPut("ChangeStatus/{id}/{newStatus}")]
     public ActionResult ChangeTaskStatus(int id, string newStatus)
     {
-        try
-        {
-            if (!ModelState.IsValid) return BadRequest(ModelState);
-
-            _userTaskService.ChangeTaskStatusInQueue(id, newStatus);
-            return Ok();
-        }
-        catch (Exception ex)
-        {
-            return LogError(ex);
-        }
+        _userTaskService.ChangeTaskStatusInQueue(id, newStatus);
+        return Ok();
     }
 
     [HttpDelete("{id}")]
     public ActionResult RemoveUserTask(int id)
     {
-        try
-        {
-            if (!ModelState.IsValid) return BadRequest(ModelState);
-
-            _userTaskService.Remove(id);
-            return Ok();
-        }
-        catch (Exception ex)
-        {
-            return LogError(ex);
-        }
+        _userTaskService.Remove(id);
+        return Ok();
     }
 
     #region Private Methods

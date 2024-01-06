@@ -6,21 +6,21 @@ namespace SinacorTestDev.WebAPI.Models;
 
 public class UserTask
 {
-    private int Id { get; set; }
+    public int Id { get; private set; }
 
     [Required(ErrorMessage = "Propriedade Name é obrigatória")]
-    private string Name { get; set; }
+    public string Name { get; private set; }
 
     [Required(ErrorMessage = "Propriedade Description é obrigatória")]
-    private string? Description { get; set; }
+    public string Description { get; private set; }
 
     [Required(ErrorMessage = "Propriedade Status é obrigatória")]
-    private string? Status { get; set; }
+    public string Status { get; private set; }
 
-    private DateTime CreatedDate { get; set; }
-    private DateTime LastModifiedDate { get; set; }
+    public DateTime CreatedDate { get; private set; }
+    public DateTime LastModifiedDate { get; private set; }
 
-    public UserTask(int id, string name, string? description, string? status)
+    public UserTask(int id, string name, string description, string status)
     {
         Id = id;
         Name = name;
@@ -45,12 +45,11 @@ public class UserTask
     }
 
     public void SetCreatedDate()
-    {
-        CreatedDate = DateTime.Now;
-    }
+        => CreatedDate = DateTime.Now;
 
     public void SetLastModifiedDate()
-    {
-        LastModifiedDate = DateTime.Now;
-    }
+        => LastModifiedDate = DateTime.Now;
+
+    public string GetName()
+        => Name;
 }
