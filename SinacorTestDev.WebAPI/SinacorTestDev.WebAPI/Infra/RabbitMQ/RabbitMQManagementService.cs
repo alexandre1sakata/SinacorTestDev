@@ -1,5 +1,4 @@
-﻿
-using RabbitMQ.Client;
+﻿using RabbitMQ.Client;
 using SinacorTestDev.WebAPI.Infra.RabbitMQ.Interfaces;
 
 namespace SinacorTestDev.WebAPI.Infra.RabbitMQ;
