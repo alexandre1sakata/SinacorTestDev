@@ -25,12 +25,15 @@ public class UserTaskService : IUserTaskService
 
     public void Add(UserTask userTask)
     {
-        userTask.CreatedDate = DateTime.Now;
+        userTask.SetCreatedDate();
         _userTaskRepository.Insert(userTask);
     }
 
-    public void Modify(UserTask entity) 
-        => _userTaskRepository.Update(entity);
+    public void Modify(UserTask userTask)
+    {
+        userTask.SetLastModifiedDate();
+        _userTaskRepository.Update(userTask);
+    }
 
     public void Remove(int id)
     {
@@ -41,13 +44,14 @@ public class UserTaskService : IUserTaskService
     public void ChangeTaskStatusInQueue(int taskId, string newStatus)
     {
         var userTask = _userTaskRepository.SelectById(taskId);
-        userTask.Status = newStatus;
+        userTask.ChangeStatus(newStatus);
 
         _rabbitManagementService.SendObjectMessage(userTask);
     }
 
     public void ChangeTaskStatus(UserTask userTask)
     {
+        userTask.SetLastModifiedDate();
         _userTaskRepository.Update(userTask);
     }
 }
