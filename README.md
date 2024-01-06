@@ -2,6 +2,7 @@
 Esta é uma aplicação para a candidatura de vaga como Desenvolvedor Fullstack na empresa B3 / Sinacor.
 
 Sistema para cadastrar e consultar tarefas, utilizando uma ASPNET Core WebAPI e Angular app.
+
 Seguindo as orientações do teste, nessa aplicação é possível ver a listagem de tarefas, cadastrar novas tarefas, editar e buscar pelo nome das tarefas.
 
 A seguir algumas ferramentas tecnologias utilizadas para implementar essas regras solicitadas:
