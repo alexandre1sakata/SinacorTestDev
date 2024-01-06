@@ -15,9 +15,11 @@ A seguir algumas tecnologias utilizadas para implementar essas regras solicitada
 
 ### Bibliotecas:
 - Bootstrap - para estilização de alguns componentes, como formularios e botões;
-- EntityFramework - para fazer a persistência das informações no banco;
 - Serilog - para registrar logs de erros na aplicação;
 - RabbitMQ - para auxiliar no workflow de troca de status das tarefas;
+- Migration - para facilitar na criação de database e tabelas.
+- EntityFramework - para fazer a persistência das informações no banco;
+- SQLServer Express - para facilitar a criação do server do BD;
 
 ### Design Patterns
 - SOLID
