@@ -9,13 +9,9 @@ namespace SinacorTestDev.WebAPI.Controllers;
 public class UserTaskController : ControllerBase
 {
     private readonly IUserTaskService _userTaskService;
-    private readonly ILogger<UserTaskController> _logger;
 
-    public UserTaskController(IUserTaskService userTaskService, ILogger<UserTaskController> logger)
-    {
-        _userTaskService = userTaskService;
-        _logger = logger;
-    }
+    public UserTaskController(IUserTaskService userTaskService)
+        => _userTaskService = userTaskService;
 
     [HttpGet]
     public ActionResult<List<UserTask>> GetAllTasks()
