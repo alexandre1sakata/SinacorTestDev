@@ -1,3 +1,0 @@
-﻿<Project>
-  <Import Project="..\buildMultiTargeting\SinacorTestDev.WebAPI.Application.props" />
-</Project>
