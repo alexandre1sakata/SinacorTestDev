@@ -40,6 +40,9 @@ A seguir algumas tecnologias utilizadas para implementar essas regras solicitada
 - Visual Studio 2022 Community - p/ webapi
 - Visual Studio Code - p/ app client
 
+### Flow diagram
+![ProjectDiagram](./Resources/ImagesReadme/SinacorTestDev_Diagram.jpg)
+
 ### Como Executar:
 
 Siga os seguintes passos para rodar a aplicação:
@@ -52,21 +55,6 @@ Siga os seguintes passos para rodar a aplicação:
 
 ```
 
-#### Front-end - app client
-2. Instale as dependências
-
-```bash
-  cd SinacorTestDev.Client
-  npm install
-```
-
-3. Inicie a aplicação do client
-
-```bash
-  npm start
-```
-
-
 #### Back-end - webapi
 1. Restaurar o pacotes
 
@@ -74,6 +62,17 @@ Siga os seguintes passos para rodar a aplicação:
   cd ..
   cd SinacorTestDev.WebAPI
   dotnet restore
+```
+
+2. Rodar o Migrations para criar as tabelas do banco
+```bash
+  abrir Package Manager Console
+  rodar_comando update-database
+```
+
+4. Instalar o rabbitMQ server ou subir imagem pelo docker
+```bash
+  [RabbitMQ](https://www.rabbitmq.com/download.html)
 ```
 
 2. Se achar necessário, testar o build da api
@@ -85,4 +84,18 @@ Siga os seguintes passos para rodar a aplicação:
 
 ```bash
   dotnet run
+```
+
+#### Front-end - app client
+4. Instale as dependências
+
+```bash
+  cd SinacorTestDev.Client
+  npm install
+```
+
+5. Inicie a aplicação do client
+
+```bash
+  npm start
 ```
