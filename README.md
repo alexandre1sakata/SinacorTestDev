@@ -41,6 +41,8 @@ A seguir algumas tecnologias utilizadas para implementar essas regras solicitada
 - Visual Studio Code - p/ app client
 
 ### Flow diagram
+- Utilizado uma arquitetura em camadas para a API:
+
 ![ProjectDiagram](./Resources/ImagesReadme/SinacorTestDev_Diagram.jpg)
 
 ### Como Executar:
