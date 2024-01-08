@@ -1,0 +1,17 @@
+C:\Users\ALEXANDRE\Desktop\apps\new\SinacorTestDev.API\SinacorTestDev.API.Database\obj\Debug\net6.0\SinacorTestDev.API.Database.csproj.AssemblyReference.cache
+C:\Users\ALEXANDRE\Desktop\apps\new\SinacorTestDev.API\SinacorTestDev.API.Database\obj\Debug\net6.0\SinacorTestDev.API.Database.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\ALEXANDRE\Desktop\apps\new\SinacorTestDev.API\SinacorTestDev.API.Database\obj\Debug\net6.0\SinacorTestDev.API.Database.AssemblyInfoInputs.cache
+C:\Users\ALEXANDRE\Desktop\apps\new\SinacorTestDev.API\SinacorTestDev.API.Database\obj\Debug\net6.0\SinacorTestDev.API.Database.AssemblyInfo.cs
+C:\Users\ALEXANDRE\Desktop\apps\new\SinacorTestDev.API\SinacorTestDev.API.Database\obj\Debug\net6.0\SinacorTestDev.API.Database.csproj.CoreCompileInputs.cache
+C:\Users\ALEXANDRE\Desktop\apps\new\SinacorTestDev.API\SinacorTestDev.API.Database\bin\Debug\net6.0\SinacorTestDev.API.Database.deps.json
+C:\Users\ALEXANDRE\Desktop\apps\new\SinacorTestDev.API\SinacorTestDev.API.Database\bin\Debug\net6.0\SinacorTestDev.API.Database.runtimeconfig.json
+C:\Users\ALEXANDRE\Desktop\apps\new\SinacorTestDev.API\SinacorTestDev.API.Database\bin\Debug\net6.0\SinacorTestDev.API.Database.dll
+C:\Users\ALEXANDRE\Desktop\apps\new\SinacorTestDev.API\SinacorTestDev.API.Database\bin\Debug\net6.0\SinacorTestDev.API.Database.pdb
+C:\Users\ALEXANDRE\Desktop\apps\new\SinacorTestDev.API\SinacorTestDev.API.Database\bin\Debug\net6.0\SinacorTestDev.API.Business.dll
+C:\Users\ALEXANDRE\Desktop\apps\new\SinacorTestDev.API\SinacorTestDev.API.Database\bin\Debug\net6.0\SinacorTestDev.API.Business.pdb
+C:\Users\ALEXANDRE\Desktop\apps\new\SinacorTestDev.API\SinacorTestDev.API.Database\obj\Debug\net6.0\SinacorTestDev.API.Database.csproj.CopyComplete
+C:\Users\ALEXANDRE\Desktop\apps\new\SinacorTestDev.API\SinacorTestDev.API.Database\obj\Debug\net6.0\SinacorTestDev.API.Database.dll
+C:\Users\ALEXANDRE\Desktop\apps\new\SinacorTestDev.API\SinacorTestDev.API.Database\obj\Debug\net6.0\refint\SinacorTestDev.API.Database.dll
+C:\Users\ALEXANDRE\Desktop\apps\new\SinacorTestDev.API\SinacorTestDev.API.Database\obj\Debug\net6.0\SinacorTestDev.API.Database.pdb
+C:\Users\ALEXANDRE\Desktop\apps\new\SinacorTestDev.API\SinacorTestDev.API.Database\obj\Debug\net6.0\SinacorTestDev.API.Database.genruntimeconfig.cache
+C:\Users\ALEXANDRE\Desktop\apps\new\SinacorTestDev.API\SinacorTestDev.API.Database\obj\Debug\net6.0\ref\SinacorTestDev.API.Database.dll

@@ -1,0 +1,3 @@
+﻿<Project>
+  <Import Project="..\buildMultiTargeting\SinacorTestDev.API.Apresentation.props" />
+</Project>
