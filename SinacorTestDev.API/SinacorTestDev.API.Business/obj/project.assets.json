@@ -13,11 +13,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\ALEXANDRE\\Desktop\\apps\\new\\SinacorTestDev.API\\SinacorTestDev.API.Business\\SinacorTestDev.API.Business.csproj",
+      "projectUniqueName": "C:\\Users\\ALEXANDRE\\Desktop\\apps\\SinacorTestDev\\SinacorTestDev.API\\SinacorTestDev.API.Business\\SinacorTestDev.API.Business.csproj",
       "projectName": "SinacorTestDev.API.Business",
-      "projectPath": "C:\\Users\\ALEXANDRE\\Desktop\\apps\\new\\SinacorTestDev.API\\SinacorTestDev.API.Business\\SinacorTestDev.API.Business.csproj",
+      "projectPath": "C:\\Users\\ALEXANDRE\\Desktop\\apps\\SinacorTestDev\\SinacorTestDev.API\\SinacorTestDev.API.Business\\SinacorTestDev.API.Business.csproj",
       "packagesPath": "C:\\Users\\ALEXANDRE\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\ALEXANDRE\\Desktop\\apps\\new\\SinacorTestDev.API\\SinacorTestDev.API.Business\\obj\\",
+      "outputPath": "C:\\Users\\ALEXANDRE\\Desktop\\apps\\SinacorTestDev\\SinacorTestDev.API\\SinacorTestDev.API.Business\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\ALEXANDRE\\AppData\\Roaming\\NuGet\\NuGet.Config",

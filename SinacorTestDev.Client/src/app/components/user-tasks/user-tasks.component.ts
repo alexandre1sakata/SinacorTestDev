@@ -2,7 +2,7 @@ import { Component } from '@angular/core';
 import { UserTaskService } from '../../services/user-task.service';
 import { UserTask } from '../../models/UserTask';
 import { Router } from '@angular/router';
-import { Observable } from 'rxjs';
+import { Observable, of } from 'rxjs';
 
 @Component({
   selector: 'app-user-tasks',
@@ -23,14 +23,28 @@ export class UserTasksComponent {
   }
 
   loadTasks(){
-    this.userTasks$ = this.userTaskService.getAllTasks();
+    this.userTaskService.getAllTasks().subscribe({
+      next: (data) => { 
+        this.userTasks$ = of(data);
+      },
+      error: (ex) => { 
+        console.error(ex);
+        alert('Erro ao carregar tarefas!')
+      }
+    });
   }
 
   changeStatus(userTask: UserTask) {
     let newStatus = userTask.status == 'pendente' ? "iniciada" : "finalizada";
-    
-    this.userTaskService.updateTaskStatus(userTask.id, newStatus).subscribe(() => {
-      setTimeout( () => { this.loadTasks(); }, 1000 );
+
+    this.userTaskService.updateTaskStatus(userTask.id, newStatus).subscribe({
+      next: () => { 
+        setTimeout( () => { this.loadTasks(); }, 1000 );
+      },
+      error: (ex) => { 
+        console.error(ex);
+        alert('Erro ao trocar status da Tarefa')
+      }
     });
   }
 
@@ -45,11 +59,17 @@ export class UserTasksComponent {
   }
 
   removeTask(id: number, name: string){
-    const accept = confirm(`Dejesa excluir a task:  ${name} ?`);
+    const accept = confirm(`Dejesa excluir a tarefa:  ${name} ?`);
     if (accept) {
-      this.userTaskService.deleteTask(id).subscribe(() => {
-        alert('Task excluída!')
-        this.loadTasks();
+      this.userTaskService.deleteTask(id).subscribe({
+        next: () => { 
+          alert('Tarefa excluída!')
+          this.loadTasks();
+        },
+        error: (ex) => { 
+          console.error(ex);
+          alert('Erro ao excluir tarefa!')
+        }
       });
     }
   }

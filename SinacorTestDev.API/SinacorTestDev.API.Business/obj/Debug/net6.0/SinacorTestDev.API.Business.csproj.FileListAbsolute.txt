@@ -9,3 +9,15 @@ C:\Users\ALEXANDRE\Desktop\apps\new\SinacorTestDev.API\SinacorTestDev.API.Busine
 C:\Users\ALEXANDRE\Desktop\apps\new\SinacorTestDev.API\SinacorTestDev.API.Business\obj\Debug\net6.0\refint\SinacorTestDev.API.Business.dll
 C:\Users\ALEXANDRE\Desktop\apps\new\SinacorTestDev.API\SinacorTestDev.API.Business\obj\Debug\net6.0\SinacorTestDev.API.Business.pdb
 C:\Users\ALEXANDRE\Desktop\apps\new\SinacorTestDev.API\SinacorTestDev.API.Business\obj\Debug\net6.0\ref\SinacorTestDev.API.Business.dll
+C:\Users\ALEXANDRE\Desktop\apps\SinacorTestDev\SinacorTestDev.API\SinacorTestDev.API.Business\bin\Debug\net6.0\SinacorTestDev.API.Business.deps.json
+C:\Users\ALEXANDRE\Desktop\apps\SinacorTestDev\SinacorTestDev.API\SinacorTestDev.API.Business\bin\Debug\net6.0\SinacorTestDev.API.Business.dll
+C:\Users\ALEXANDRE\Desktop\apps\SinacorTestDev\SinacorTestDev.API\SinacorTestDev.API.Business\bin\Debug\net6.0\SinacorTestDev.API.Business.pdb
+C:\Users\ALEXANDRE\Desktop\apps\SinacorTestDev\SinacorTestDev.API\SinacorTestDev.API.Business\obj\Debug\net6.0\SinacorTestDev.API.Business.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\ALEXANDRE\Desktop\apps\SinacorTestDev\SinacorTestDev.API\SinacorTestDev.API.Business\obj\Debug\net6.0\SinacorTestDev.API.Business.AssemblyInfoInputs.cache
+C:\Users\ALEXANDRE\Desktop\apps\SinacorTestDev\SinacorTestDev.API\SinacorTestDev.API.Business\obj\Debug\net6.0\SinacorTestDev.API.Business.AssemblyInfo.cs
+C:\Users\ALEXANDRE\Desktop\apps\SinacorTestDev\SinacorTestDev.API\SinacorTestDev.API.Business\obj\Debug\net6.0\SinacorTestDev.API.Business.csproj.CoreCompileInputs.cache
+C:\Users\ALEXANDRE\Desktop\apps\SinacorTestDev\SinacorTestDev.API\SinacorTestDev.API.Business\obj\Debug\net6.0\SinacorTestDev.API.Business.sourcelink.json
+C:\Users\ALEXANDRE\Desktop\apps\SinacorTestDev\SinacorTestDev.API\SinacorTestDev.API.Business\obj\Debug\net6.0\SinacorTestDev.API.Business.dll
+C:\Users\ALEXANDRE\Desktop\apps\SinacorTestDev\SinacorTestDev.API\SinacorTestDev.API.Business\obj\Debug\net6.0\refint\SinacorTestDev.API.Business.dll
+C:\Users\ALEXANDRE\Desktop\apps\SinacorTestDev\SinacorTestDev.API\SinacorTestDev.API.Business\obj\Debug\net6.0\SinacorTestDev.API.Business.pdb
+C:\Users\ALEXANDRE\Desktop\apps\SinacorTestDev\SinacorTestDev.API\SinacorTestDev.API.Business\obj\Debug\net6.0\ref\SinacorTestDev.API.Business.dll

@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "4wnULaCpNoBJiZzqisTSwZe5HtuwVsuU/ooYuJ89xgSci3jbwn5MPs4x1pO65CUMT0XNZPnnQbxoOb1bHmPN9Q==",
+  "dgSpecHash": "cbpisDkXCUNetX4jZm9vUJW4ln7u1YEWuzQMURF8F8xDAWsK6ooMidv45E7WfLQups8POUfWbwQd99/aRNcD1A==",
   "success": true,
-  "projectFilePath": "C:\\Users\\ALEXANDRE\\Desktop\\apps\\new\\SinacorTestDev.API\\SinacorTestDev.API.Apresentation\\SinacorTestDev.API.Apresentation.csproj",
+  "projectFilePath": "C:\\Users\\ALEXANDRE\\Desktop\\apps\\SinacorTestDev\\SinacorTestDev.API\\SinacorTestDev.API.Apresentation\\SinacorTestDev.API.Apresentation.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\ALEXANDRE\\.nuget\\packages\\azure.core\\1.24.0\\azure.core.1.24.0.nupkg.sha512",
     "C:\\Users\\ALEXANDRE\\.nuget\\packages\\azure.identity\\1.6.0\\azure.identity.1.6.0.nupkg.sha512",

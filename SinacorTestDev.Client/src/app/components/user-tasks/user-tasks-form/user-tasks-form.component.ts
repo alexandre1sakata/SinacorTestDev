@@ -45,19 +45,47 @@ export class UserTasksFormComponent implements OnInit {
             status: data.status
           });
         });
+
+        this.userTaskService.getTaskById(taskId).subscribe({
+          next: (data) => { 
+            this.taskForm.patchValue({
+              id: data.id,
+              name: data.name,
+              description: data.description,
+              status: data.status
+            });
+          },
+          error: (ex) => { 
+            console.error(ex);
+            alert('Erro ao carregar tarefa para editar!')
+          }
+        });
       }
     });
   }
 
   onSubmit(){
     if(this.taskForm.valid){
+      let submitSuccess = false;
+      
       if(!this.isEditTask){
-        this.userTaskService.createTask(this.taskForm.value).subscribe();
+        this.userTaskService.createTask(this.taskForm.value).subscribe({
+          next: () => { submitSuccess = true },
+          error: (ex) => { console.error(ex) }
+        });        
       } else {
-        this.userTaskService.updateTask(this.taskForm.value.id, this.taskForm.value).subscribe();
+        this.userTaskService.updateTask(this.taskForm.value.id, this.taskForm.value).subscribe({
+          next: () => { submitSuccess = true },
+          error: (ex) => { console.error(ex) }
+        });
       }
-      alert(`Tarefa ${this.isEditTask ? 'salva' : 'criada'}!`);
-      setTimeout( () => { this.router.navigateByUrl('/tasks'); }, 1000 );
+
+      if(submitSuccess){
+        alert(`Tarefa ${this.isEditTask ? 'salva' : 'criada'}!`);
+        setTimeout( () => { this.router.navigateByUrl('/tasks'); }, 1000 );
+      } else {
+        alert(`Erro ao ${this.isEditTask ? 'salvar' : 'criar'} tarefa!`);
+      }
     }
   }
 }

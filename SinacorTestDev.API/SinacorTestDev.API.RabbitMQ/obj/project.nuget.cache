@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "5PCsIZJUTF6iNatjw1xfAWSiJZK8qE4j4fU5lsRDos5O7zxD/SaWvpASCQuQGp0deKAax54mRJ8x7xAlyEG22g==",
+  "dgSpecHash": "MKHY7Z6erBGvGEy1ErDCEaVphHiiSpOAErHAweLcXToCCB/mVJ85V2puKjj6+8kj4VGp1GaVkU22l6aNLGo7Vg==",
   "success": true,
-  "projectFilePath": "C:\\Users\\ALEXANDRE\\Desktop\\apps\\new\\SinacorTestDev.API\\SinacorTestDev.API.RabbitMQ\\SinacorTestDev.API.RabbitMQ.csproj",
+  "projectFilePath": "C:\\Users\\ALEXANDRE\\Desktop\\apps\\SinacorTestDev\\SinacorTestDev.API\\SinacorTestDev.API.RabbitMQ\\SinacorTestDev.API.RabbitMQ.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\ALEXANDRE\\.nuget\\packages\\microsoft.extensions.dependencyinjection\\8.0.0\\microsoft.extensions.dependencyinjection.8.0.0.nupkg.sha512",
     "C:\\Users\\ALEXANDRE\\.nuget\\packages\\microsoft.extensions.dependencyinjection.abstractions\\8.0.0\\microsoft.extensions.dependencyinjection.abstractions.8.0.0.nupkg.sha512",
