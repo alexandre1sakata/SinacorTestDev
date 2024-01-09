@@ -41,6 +41,8 @@ A seguir algumas tecnologias utilizadas para implementar essas regras solicitada
 - Visual Studio Code - p/ app client
 
 ### Flow diagram
+- Utilizado uma arquitetura em camadas para a API:
+
 ![ProjectDiagram](./Resources/ImagesReadme/SinacorTestDev_Diagram.jpg)
 
 ### Como Executar:
@@ -56,8 +58,8 @@ Siga os seguintes passos para rodar a aplicação:
 ```
 
 #### Back-end - webapi
-1. Restaurar o pacotes
 
+1. Restaurar o pacotes
 ```bash
   cd ..
   cd SinacorTestDev.WebAPI
@@ -70,32 +72,30 @@ Siga os seguintes passos para rodar a aplicação:
   rodar_comando update-database
 ```
 
-4. Instalar o rabbitMQ server ou subir imagem pelo docker
+3. Instalar o rabbitMQ server ou subir imagem pelo docker
 ```bash
   [RabbitMQ](https://www.rabbitmq.com/download.html)
 ```
 
-2. Se achar necessário, testar o build da api
+4. Se achar necessário, testar o build da api
 ```bash
   dotnet build
 ```
 
-3. Inicie a aplicação da api
-
+5. Inicie a aplicação da api
 ```bash
   dotnet run
 ```
 
 #### Front-end - app client
-4. Instale as dependências
 
+6. Instale as dependências
 ```bash
   cd SinacorTestDev.Client
   npm install
 ```
 
-5. Inicie a aplicação do client
-
+7. Inicie a aplicação do client
 ```bash
   npm start
 ```
