@@ -1,0 +1,21 @@
+#
+# RabbitMQ Dockerfile
+#
+# https://www.rabbitmq.com/download.html
+#
+
+# pull base image
+FROM rabbitmq:latest
+
+# Expose ports
+EXPOSE 5672 15672
+
+# Set the default user and password for RabbitMQ
+ENV RABBITMQ_DEFAULT_USER=guest
+ENV RABBITMQ_DEFAULT_PASS=guest
+
+# Enable RabbitMQ management plugin
+RUN rabbitmq-plugins enable rabbitmq_management
+
+# Set the entry point to the RabbitMQ server
+CMD ["rabbitmq-server"]

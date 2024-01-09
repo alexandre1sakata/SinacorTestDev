@@ -72,12 +72,18 @@ Siga os seguintes passos para rodar a aplicação:
   rodar_comando update-database
 ```
 
-3. Instalar o rabbitMQ server ou subir imagem pelo docker
-```bash
-  [RabbitMQ](https://www.rabbitmq.com/download.html)
-```
+3. Subir imagem do RabbitMQ ou instalar por windows installer
 
-4. Se achar necessário, testar o build da api
+- Docker image (dockerfile):
+    - Run `rabbitmq-server`:
+    ``` bash
+    docker run -d -p 5672:5672 -p 15672:15672 dockerfile/rabbitmq
+    ```
+
+- Windows installer:
+    - [RabbitMQ - download link](https://www.rabbitmq.com/download.html)
+
+4. Se achar necessário, build da api
 ```bash
   dotnet build
 ```
