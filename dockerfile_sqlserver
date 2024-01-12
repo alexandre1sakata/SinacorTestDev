@@ -1,0 +1,18 @@
+#
+# SQL Server Express Dockerfile
+#
+# https://www.microsoft.com/pt-br/sql-server/sql-server-downloads
+#
+
+# pull base image
+FROM mcr.microsoft.com/mssql/server:2022-latest
+
+# Expose ports
+EXPOSE 1433
+
+# Set environment variables for SQL Server
+ENV MSSQL_SA_PASSWORD=admin123!
+ENV ACCEPT_EULA=Y
+
+# Set the entry point to the SqlServer image
+CMD ["/opt/mssql/bin/sqlservr"]
