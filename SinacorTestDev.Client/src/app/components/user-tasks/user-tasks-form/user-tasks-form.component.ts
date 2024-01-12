@@ -70,22 +70,25 @@ export class UserTasksFormComponent implements OnInit {
       
       if(!this.isEditTask){
         this.userTaskService.createTask(this.taskForm.value).subscribe({
-          next: () => { submitSuccess = true },
-          error: (ex) => { console.error(ex) }
+          next: () => { this.processResultSubmit(true) },
+          error: (ex) => { this.processResultSubmit(false, ex) }
         });        
       } else {
         this.userTaskService.updateTask(this.taskForm.value.id, this.taskForm.value).subscribe({
-          next: () => { submitSuccess = true },
-          error: (ex) => { console.error(ex) }
+          next: () => { this.processResultSubmit(true) },
+          error: (ex) => { this.processResultSubmit(false, ex) }
         });
       }
+    }
+  }
 
-      if(submitSuccess){
-        alert(`Tarefa ${this.isEditTask ? 'salva' : 'criada'}!`);
-        setTimeout( () => { this.router.navigateByUrl('/tasks'); }, 1000 );
-      } else {
-        alert(`Erro ao ${this.isEditTask ? 'salvar' : 'criar'} tarefa!`);
-      }
+  processResultSubmit(submitSuccess: boolean, ex: any = null) {
+    if (submitSuccess) {
+      alert(`Tarefa ${this.isEditTask ? 'salva' : 'criada'}!`);
+      setTimeout(() => { this.router.navigateByUrl('/tasks'); }, 1000);
+    } else {
+      console.error(ex)
+      alert(`Erro ao ${this.isEditTask ? 'salvar' : 'criar'} tarefa!`);
     }
   }
 }

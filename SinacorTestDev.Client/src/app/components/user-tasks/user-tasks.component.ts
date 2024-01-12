@@ -51,7 +51,16 @@ export class UserTasksComponent {
   searchTaskByName(){
     if(this.searchTaskname == undefined) return;
     
-    this.userTasks$ = this.userTaskService.getTasksByName(this.searchTaskname);
+    this.userTaskService.getTasksByName(this.searchTaskname).subscribe({
+      next: (data) => { 
+        this.userTasks$ = of(data)
+      },
+      error: (ex) => { 
+        console.error(ex);
+        alert('Erro ao consultar tarefas!')
+        this.loadTasks();
+      }
+    });
   }
 
   getStatusList(){

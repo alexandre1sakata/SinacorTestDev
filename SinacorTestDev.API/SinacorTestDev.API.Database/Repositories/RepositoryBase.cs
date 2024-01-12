@@ -24,7 +24,7 @@ public class RepositoryBase<T> : IRepository<T> where T : class
         return _dbSet
             .AsEnumerable()
             .Where(entity => (entity as UserTask).GetName()
-                .Contains(name))
+                .Contains(name, StringComparison.OrdinalIgnoreCase))
             .ToList();
     }
 

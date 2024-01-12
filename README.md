@@ -40,6 +40,7 @@ A seguir algumas tecnologias utilizadas para implementar essas regras solicitada
 #### IDEs
 - Visual Studio 2022 Community - p/ webapi
 - Visual Studio Code - p/ app client
+- Azure Data Studio - p/ banco de dados
 
 ## Flow diagram
 - Utilizado uma arquitetura em camadas para a API:
@@ -62,7 +63,6 @@ Siga os seguintes passos para rodar a aplicação:
 
 1. Restaurar o pacotes
 ```bash
-  cd ..
   cd SinacorTestDev.WebAPI
   dotnet restore
 ```
@@ -72,8 +72,8 @@ Siga os seguintes passos para rodar a aplicação:
 2. Subir imagem do SqlServer ou instalar no windows
 - Docker image (dockerfile_sqlserver):
  ```bash
-docker build -t sqlserver -f dockerfile_sqlserver .
-docker run -e 'ACCEPT_EULA=Y' -e 'MSSQL_SA_PASSWORD=admin123!' -p 1433:1433 -d sqlserver
+  docker build -t sqlserver -f dockerfile_sqlserver .
+  docker run -e 'ACCEPT_EULA=Y' -e 'MSSQL_SA_PASSWORD=admin123!' -p   1433:1433 -d sqlserver
  ```
 
 - Windows installer:
@@ -83,8 +83,8 @@ docker run -e 'ACCEPT_EULA=Y' -e 'MSSQL_SA_PASSWORD=admin123!' -p 1433:1433 -d s
 
 - Docker image (dockerfile_rabbitmq):
 ```bash
-docker build -t rabbitmq -f dockerfile_rabbitmq .
-docker run -d -p 5672:5672 -p 15672:15672 rabbitmq
+  docker build -t rabbitmq -f dockerfile_rabbitmq .
+  docker run -d -p 5672:5672 -p 15672:15672 rabbitmq
 ```
 
 - Windows installer:
@@ -92,7 +92,8 @@ docker run -d -p 5672:5672 -p 15672:15672 rabbitmq
 
 4. Rodar o Migrations para criar as tabelas do banco
 ```bash
-  abrir Package Manager Console
+  abrir Package Manager Console (Visual_Studio)
+  Default_Project => SinacorTestDev.API.Database
   rodar_comando update-database
 ```
 
@@ -110,6 +111,7 @@ docker run -d -p 5672:5672 -p 15672:15672 rabbitmq
 
 1. Instale as dependências
 ```bash
+  cd ..
   cd SinacorTestDev.Client
   npm install
 ```
